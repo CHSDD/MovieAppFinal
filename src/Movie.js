@@ -1,16 +1,21 @@
-import React from "react";
-import PropTyps from "prop-types";
+import React from "react"
+import propTypes from "prop-types"
 
-function Movie({ id, year, title, summary, poster }) {
-    return <h5>{title}</h5>;
-}
+function Movie({id, year, title, summary, poster}) {
+    return (
+      <div>
+        <h5>{title}</h5>
+        <span>{year}</span>
+      </div>
+    );
+  }
 
 Movie.propTypes = {
-    id: PropTypes.number.isRequired,
-    year: PropTypes.number.isRequired,
-    title: PropTyps.string.isRequired,
-    summary: PropTyps.string.isRequired,
-    poster: PropTyps.string.isRequired
-};
+  id: propTypes.number.isRequired,
+  year: propTypes.number.isRequired,
+  title: propTypes.string.isRequired,
+  summary: propTypes.string.isRequired,
+  poster: propTypes.string.isRequired,
+}
 
-    export default Movie;
+export default Movie;
